@@ -1,0 +1,93 @@
+topicModel.find().count(function(err,num){
+// 分页
+	var page=req.query.page?req.query.page:1;
+	var pageNum=8;
+	// 可以分多少页
+	var pageMax=Math.ceil(num/pageNum);
+	// 小于1 赋值为一
+	//页码
+	if(page<=0){
+		page=1;
+	}
+	 
+	if(page>=pageMax){
+		page=pageMax;
+	}
+	var pageOffset=(page-1)*pageNum;
+
+	var tab=req.query.tab;
+	if(tab=="share"){
+			topicModel.find(
+			{tab:0},//条件
+			{},//显示那个字段{uname:1}
+			{
+				sort:{
+					retime:-1
+				},skip:pageOffset,limit:pageNum
+			}//最后参数{sort:{}}
+			).populate("uid").populate("lastUser",{userIco:1}).exec(function(err,topic){
+			if(err){console.log(err);return}
+			res.render("index",{topic:topic,page:page,pageMax:pageMax});
+		})
+	}else if(tab=="ask"){
+		topicModel.find(
+			{tab:2},//条件
+			{},//显示那个字段{uname:1}
+			{
+				sort:{
+					retime:-1
+				},skip:pageOffset,limit:pageNum
+			}//最后参数{sort:{}}
+			).populate("uid").populate("lastUser",{userIco:1}).exec(function(err,topic){
+			if(err){console.log(err);return}
+			res.render("index",{topic:topic,page:page,pageMax:pageMax});
+		})
+	}else if(tab=="job"){
+		topicModel.find(
+			{tab:1},//条件
+			{},//显示那个字段{uname:1}
+			{
+				sort:{
+					retime:-1
+				},skip:pageOffset,limit:pageNum
+			}//最后参数{sort:{}}
+			).populate("uid").populate("lastUser",{userIco:1}).exec(function(err,topic){
+			if(err){console.log(err);return}
+			res.render("index",{topic:topic,page:page,pageMax:pageMax});
+		})
+	}else if(tab=="dev"){
+		topicModel.find(
+			{tab:3},//条件
+			{},//显示那个字段{uname:1}
+			{
+				sort:{
+					retime:-1
+				},skip:pageOffset,limit:pageNum
+			}//最后参数{sort:{}}
+			).populate("uid").populate("lastUser",{userIco:1}).exec(function(err,topic){
+			if(err){console.log(err);return}
+			res.render("index",{topic:topic,page:page,pageMax:pageMax});
+		})
+	}else{
+			topicModel.find(
+			{},//条件
+			{},//显示那个字段{uname:1}
+			{
+				sort:{
+					retime:-1
+				},skip:pageOffset,limit:pageNum
+			}//最后参数{sort:{}}
+			).populate("uid").populate("lastUser",{userIco:1}).exec(function(err,topic){
+			if(err){console.log(err);return}
+			res.render("index",{topic:topic,page:page,pageMax:pageMax});
+		})
+	}
+
+	
+})
+
+
+
+}
+
+module.exports=obj;

@@ -1,0 +1,94 @@
+<%include ../layout/header%>
+  <script src="/js/ueditor/ueditor.config.js"></script>
+  <script src="/js/ueditor/ueditor.all.min.js"></script>
+  <script src="/js/ueditor/lang/zh-cn/zh-cn.js"></script>
+<div id="main">
+  <div id="sidebar">
+  <div class="panel">
+    <div class="header">
+      <span class="col_fade">Markdown 语法参考</span>
+    </div>
+    <div class="inner">
+      <ol>
+        <li><tt>### 单行的标题</tt></li>
+        <li><tt>**粗体**</tt></li>
+        <li><tt>`console.log('行内代码')`</tt></li>
+        <li><tt>```js\n code \n```</tt> 标记代码块</li>
+        <li><tt>[内容](链接)</tt></li>
+        <li><tt>![文字说明](图片链接)</tt></li>
+      </ol>
+      <span><a href="https://segmentfault.com/markdown" target="_blank">Markdown 文档</a></span>
+    </div>
+  </div>
+
+  <div class="panel">
+    <div class="header">
+      <span class="col_fade">话题发布指南</span>
+    </div>
+    <div class="inner">
+      <ol>
+        <li>尽量把话题要点浓缩到标题里</li>
+        <li>代码含义和报错可在 <a href="http://segmentfault.com/t/node.js">SegmentFault</a> 提问</li>
+      </ol>
+    </div>
+  </div>
+
+</div>
+
+
+<div id="content">
+  <div class="panel">
+    <div class="header">
+      <ol class="breadcrumb">
+        <li><a href="/">主页</a><span class="divider">/</span></li>
+        
+        <li class="active">发布话题</li>
+        
+      </ol>
+    </div>
+    <div class="inner post">
+      
+      
+      
+        <form id="create_topic_form" action="/topic/docreate" method="post">
+          
+          <fieldset>
+            <span class="tab-selector">选择版块：</span>
+
+            <select name="tab" id="tab-value">
+              <option value="">请选择</option>
+              <%topicType.forEach(function(item){%>
+                  <option value="<%=item.order%>"><%=item.topicTypeName%></option>
+              <%})%>
+            </select>
+
+            <span id="topic_create_warn"></span>
+
+            <textarea autofocus="" class="span9" id="title" name="title" rows="1" placeholder="标题字数 10 字以上"></textarea>
+            
+
+            <!-- 内容文本框输入域 -->
+           <textarea required id="editor" name="content" style="min-height:300px" placeholder="请输入内容"></textarea>
+
+            <input type="hidden" id="topic_tags" name="uid" value="<%=user._id%>">
+
+          <div class="editor_buttons">
+                  <input type="submit" class="span-primary submit_btn" data-loading-text="提交中" value="提交">
+         </div>
+          </fieldset>
+        </form>
+    </div>
+    
+  </div>
+</div>
+
+
+
+<script>
+  // 实例化编辑器 -- 该位置的editor就是上面的文本域的id
+  var ue = UE.getEditor('editor');
+</script>
+
+
+</div>
+<%include ../layout/footer%>

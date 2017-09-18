@@ -1,0 +1,279 @@
+<%include ../layout/header%>
+  <script src="/js/ueditor/ueditor.config.js"></script>
+  <script src="/js/ueditor/ueditor.all.min.js"></script>
+  <script src="/js/ueditor/lang/zh-cn/zh-cn.js"></script>
+
+  <div id="main">
+  <div id="sidebar">
+  <div class="panel">
+    <div class="header">
+      <span class="col_fade">作者</span>
+    </div>
+    <div class="inner">
+      <div class="user_card">
+  <div>
+    <a class="user_avatar" href="/user/Mesea">
+        <img src="/usericos/<%=topic.uid.userIco?topic.uid.userIco:'default.jpg'%>">
+    </a>
+    <span class="user_name"><a class="dark" href="/user/Mesea"><%=topic.uid.uname%></a></span>
+
+    <div class="board clearfix">
+      <div class="floor">
+        <span class="big">积分:<%=topic.uid.glob%> </span>
+      </div>
+    </div>
+    <div class="space clearfix"></div>
+    <span class="signature">
+        “
+        <%=topic.uid.mark%>
+        ”
+    </span>
+  </div>
+</div>
+
+
+
+
+    </div>
+  </div>
+
+  
+    
+<div class="panel">
+  <div class="inner ads">
+
+    
+      
+      <a href="https://alinode.aliyun.com/?ref=cnode" target="_blank" class="banner sponsor_outlink" data-label="alinode">
+        <img src="//dn-cnode.qbox.me/Fn4D6BhOTz1IswvmzeZ1q7QW1ls_">
+      </a>
+    
+      
+        <div class="sep10"></div>
+      
+      <a href="http://www.ucloud.cn/site/active/gift.html?utm_source=cnodejs&amp;utm_medium=content_pic_pc&amp;utm_campaign=multicloud&amp;utm_content=gift&amp;ytag=cnodejs" target="_blank" class="banner sponsor_outlink" data-label="ucloud-banner">
+        <img src="//dn-cnode.qbox.me/FgQS-GQDfqwAD_v0NuhyYUOUk5MG">
+      </a>
+    
+      
+        <div class="sep10"></div>
+      
+      <a href="http://www.tingyun.com/tingyun_server.html" target="_blank" class="banner sponsor_outlink" data-label="tingyun">
+        <img src="//dn-cnode.qbox.me/FvGk14CRylsdmV2OhA2J63mqdB6-">
+      </a>
+    
+  </div>
+</div>
+
+
+
+  <div class="panel">
+    <div class="header">
+      <span class="col_fade">无人回复的话题</span>
+    </div>
+    <div class="inner">
+      
+      <ul class="unstyled">
+        <li>
+  <div><a class="dark topic_title" href="/topic/599bea08ebaa046923a8268a" title="制作一个命令行播放器">制作一个命令行播放器</a>
+  </div>
+</li>
+<li>
+  <div><a class="dark topic_title" href="/topic/599bafd24e3c4e5a7021b2fe" title="React版v2ex社区（react &amp; react-router &amp; axios &amp; antd ui）">React版v2ex社区（react &amp; react-router &amp; axios &amp; antd ui）</a>
+  </div>
+</li>
+<li>
+  <div><a class="dark topic_title" href="/topic/599ab0754e3c4e5a7021b2c6" title="基于vue + nuxt 打造 o2o教育商城系统（触屏版） 服务端渲染SSR">基于vue + nuxt 打造 o2o教育商城系统（触屏版） 服务端渲染SSR</a>
+  </div>
+</li>
+<li>
+  <div><a class="dark topic_title" href="/topic/599aadc2ebaa046923a8261c" title="关于http模块里的，request方法的一些疑问。">关于http模块里的，request方法的一些疑问。</a>
+  </div>
+</li>
+<li>
+  <div><a class="dark topic_title" href="/topic/599a972debaa046923a82609" title="关于 cnpm  mirrors 通过 npmrc/env 配置镜像站点的规则是约定俗称还是怎么样？">关于 cnpm  mirrors 通过 npmrc/env 配置镜像站点的规则是约定俗称还是怎么样？</a>
+  </div>
+</li>
+
+      </ul>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- { _id: 599e6be407b2880af4a2ddde,
+  tab: '0',
+  title: '我爱北京天安门',
+  content: '<p>安徽省科技活动活动空间好好的授课计划发的数据库<img src="http://img.baidu.com/hi/jx2/j_0028.gif"/></p>',
+  uid:
+   { _id: 599e2d34e635cc06f4c9085b,
+     uname: 'Msea',
+     glob: 20,
+     userIco: '20170824qul7gnffru.jpg',
+     mark: '我们的祖国是花园\r\n            ' },
+  viewNum: 0 } -->
+
+
+<div id="content">
+  <div class="panel">
+    <div class="header topic_header">
+      <span class="topic_full_title">
+
+        
+
+
+     <%=topic.title%>
+      </span>
+      <div class="changes">
+        <span>
+        <%=setTime(topic.retime)%>
+        </span>
+        <span>
+          作者 <a href="/user/Mesea"> <%=topic.uid.uname%></a>
+        </span>
+        <span>
+           <%=topic.viewNum%>次浏览
+        </span>
+        
+        
+          <span> 来自 <%=test(topic.tab)%></span>
+        <%
+            //后台代码表达式
+            function test(num){
+              var con; 
+                switch(num){
+                  case "0":
+                    con="分享";
+                    break;
+                  case "1":
+                    con="招聘";
+                    break;
+                  case "2":
+                    con="客户端测试";
+                    break;
+                };
+                return con;
+            }
+        %>
+
+
+      </div>
+      
+ 
+      
+    </div>
+    <div class="inner topic">
+
+      <div class="topic_content">
+        <div class="markdown-text">
+          <%-topic.content%>
+      </div>
+      </div>
+    </div>
+  </div>
+  
+  
+
+  <div class="panel">
+    <div class="header">
+      <span class="col_fade"><%=topic.reply.length%>回复</span>
+    </div>
+
+
+
+
+
+
+<%console.log(topic,reply)%>
+<!-- 回复遍历 -->
+
+<%reply.forEach(function(item){%>
+    
+    <div class="cell reply_area reply_item
+  " reply_id="599c4df94e3c4e5a7021b359" reply_to_id="" id="599c4df94e3c4e5a7021b359">
+  <div class="author_content">
+    <a href="/user/zy445566" class="user_avatar">
+      <img src="/usericos/<%=item.uid.userIco%>" ></a>
+
+    <div class="user_info">
+      <a class="dark reply_author" href="/user/zy445566"><%=item.uid.uname%></a>
+      <a class="reply_time" href="#599c4df94e3c4e5a7021b359"><%=item.lou%>楼•<%=setTime(item.retime)%></a>
+      
+    </div>
+    <div class="user_action">
+      <span>
+        <i class="fa up_btn           fa-thumbs-o-up invisible" title="喜欢"></i>
+        <span class="up-count">
+          
+        </span>
+      </span>
+      
+      <span>
+        
+          <i class="fa fa-reply reply2_btn" title="回复"></i>
+        
+      </span>
+    </div>
+  </div>
+  <div class="reply_content from-zy445566">
+    <div class="markdown-text">
+    <%-item.content%>
+</div>
+</div>
+</div>
+
+<%})%>
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+<%if(user){%>
+  <div class="panel">
+    <div class="header">
+      <span class="col_fade">添加回复</span>
+    </div>
+    <div class="inner reply">
+      <form id="reply_form" action="/topic/reply" method="post">
+
+
+      <textarea required id="editor" name="content" style="min-height:300px" placeholder="请输入内容"></textarea>
+      
+        <!-- 当前话题ID -->
+        <input type="hidden" name="tid" id="_csrf" value="<%=topic._id%>">
+
+        <div class="editor_buttons">
+          <input class="span-primary submit_btn" type="submit" data-loading-text="回复中.." value="回复">
+        </div>
+      </form>
+    </div>
+  </div>
+<%}%>
+
+  
+</div>
+
+<div class="replies_history" style="display: none;">
+  <div class="inner_content"></div>
+  <div class="anchor"></div>
+</div>
+
+</div>
+
+
+<script>
+  // 实例化编辑器 -- 该位置的editor就是上面的文本域的id
+  var ue = UE.getEditor('editor');
+</script>
+
+<%include ../layout/footer%>

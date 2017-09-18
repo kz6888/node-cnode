@@ -1,0 +1,346 @@
+<%include ../layout/header%>
+
+<div id="main">
+  <div id="sidebar">
+
+
+ 
+
+<!-- 未登录样式 -->
+
+<%if(user){%>
+<%include ../layout/sidebar%>
+<%}else{%>
+
+  <div class="panel">
+    
+    <div class="inner">
+      <p>CNode：Node.js专业中文社区</p>
+
+      <div>
+        您可以
+        <a href="/signin">登录</a>
+        或
+        <a href="/signup">注册</a>
+        , 也可以
+        <a href="/auth/github">
+          <span class="span-info">
+            通过 GitHub 登录
+          </span>
+        </a>
+      </div>
+    </div>
+    
+  </div>
+
+ <%}%> 
+
+
+  
+    
+<div class="panel">
+  <div class="inner ads">
+
+    
+      
+      <a href="https://alinode.aliyun.com/?ref=cnode" target="_blank" class="banner sponsor_outlink" data-label="alinode">
+        <img src="//dn-cnode.qbox.me/Fn4D6BhOTz1IswvmzeZ1q7QW1ls_">
+      </a>
+    
+      
+        <div class="sep10"></div>
+      
+      <a href="http://www.ucloud.cn/site/active/gift.html?utm_source=cnodejs&amp;utm_medium=content_pic_pc&amp;utm_campaign=multicloud&amp;utm_content=gift&amp;ytag=cnodejs" target="_blank" class="banner sponsor_outlink" data-label="ucloud-banner">
+        <img src="//dn-cnode.qbox.me/FgQS-GQDfqwAD_v0NuhyYUOUk5MG">
+      </a>
+    
+      
+        <div class="sep10"></div>
+      
+      <a href="http://www.tingyun.com/tingyun_server.html" target="_blank" class="banner sponsor_outlink" data-label="tingyun">
+        <img src="//dn-cnode.qbox.me/FvGk14CRylsdmV2OhA2J63mqdB6-">
+      </a>
+    
+  </div>
+</div>
+
+  
+
+  
+  <div class="panel">
+    <div class="header">
+      <span class="col_fade">无人回复的话题</span>
+    </div>
+    <div class="inner">
+      
+      <ul class="unstyled">
+        <li>
+  <div><a class="dark topic_title" href="/topic/5996903a4e3c4e5a7021b1d8" title="Node读取二进制文件的问题">Node读取二进制文件的问题</a>
+  </div>
+</li>
+
+
+      </ul>
+      
+    </div>
+  </div>
+  
+
+  
+  <div class="panel">
+    <div class="header">
+      <span class="col_fade">积分榜</span>
+      &nbsp;
+      <a class="dark" href="/users/top100">TOP 100 &gt;&gt;</a>
+    </div>
+    <div class="inner">
+      
+      <ol>
+        <li>
+  <span class="top_score">19440</span>
+  <span class="user_name"><a href="/user/i5ting">i5ting</a></span>
+</li>
+<li>
+  <span class="top_score">14595</span>
+  <span class="user_name"><a href="/user/alsotang">alsotang</a></span>
+</li>
+<li>
+  <span class="top_score">9330</span>
+  <span class="user_name"><a href="/user/leapon">leapon</a></span>
+</li>
+<li>
+  <span class="top_score">8700</span>
+  <span class="user_name"><a href="/user/jiyinyiyong">jiyinyiyong</a></span>
+</li>
+<li>
+  <span class="top_score">7705</span>
+  <span class="user_name"><a href="/user/zy445566">zy445566</a></span>
+</li>
+<li>
+  <span class="top_score">6555</span>
+  <span class="user_name"><a href="/user/yakczh">yakczh</a></span>
+</li>
+<li>
+  <span class="top_score">5630</span>
+  <span class="user_name"><a href="/user/DevinXian">DevinXian</a></span>
+</li>
+<li>
+  <span class="top_score">5460</span>
+  <span class="user_name"><a href="/user/imhered">imhered</a></span>
+</li>
+<li>
+  <span class="top_score">5195</span>
+  <span class="user_name"><a href="/user/magicdawn">magicdawn</a></span>
+</li>
+<li>
+  <span class="top_score">4680</span>
+  <span class="user_name"><a href="/user/captainblue2013">captainblue2013</a></span>
+</li>
+
+      </ol>
+      
+    </div>
+  </div>
+  
+
+  <div class="panel">
+    <div class="header">
+      <span class="col_fade">友情社区</span>
+    </div>
+    <div class="inner">
+      <ol class="friendship-community">
+        <li>
+          <a href="https://ruby-china.org/" target="_blank">
+            <img src="//o4j806krb.qnssl.com/public/images/ruby-china-20150529.png">
+          </a>
+        </li>
+        <div class="sep10"></div>
+        <li>
+          <a href="http://golangtc.com/" target="_blank">
+            <img src="//o4j806krb.qnssl.com/public/images/golangtc-logo.png">
+          </a>
+        </li>
+        <div class="sep10"></div>
+        <li>
+          <a href="http://phphub.org/" target="_blank">
+            <img src="//o4j806krb.qnssl.com/public/images/phphub-logo.png">
+          </a>
+        </li>
+        <div class="sep10"></div>
+        <li>
+          <a href="https://testerhome.com/" target="_blank">
+            <img src="//dn-cnode.qbox.me/FjLUc7IJ2--DqS706etPQ1EGajxK">
+          </a>
+        </li>
+      </ol>
+    </div>
+  </div>
+  <div class="panel">
+    <div class="header">
+      <span class="col_fade">客户端二维码</span>
+    </div>
+    <div class="inner cnode-app-download">
+      <img width="200" src="//dn-cnode.qbox.me/FtG0YVgQ6iginiLpf9W4_ShjiLfU">
+      <br>
+      <a href="https://github.com/soliury/noder-react-native" target="_blank">客户端源码地址</a>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+<div id="content">
+  <div class="panel">
+    <div class="header">
+  
+   
+       <a href="/?tab=all" class="topic-tab">我的话题</a>
+
+       
+      
+    </div>
+
+</script>
+
+
+
+
+<div class="inner no-padding">
+      <div id="topic_list">
+
+
+<!-- 话题遍历 -->
+
+<%dd.forEach(function(item){%>
+  <div class="cell">
+
+  <a class="user_avatar pull-left" href="/user/i5ting">
+    <img src="/usericos/<%=item.uid.userIco?item.uid.userIco:'default.jpg'%>" title="i5ting">
+  </a>
+ 
+  <span class="reply_count pull-left">
+    <span class="count_of_replies" title="回复数">
+      <%=item.reply.length%>
+    </span>
+    <span class="count_seperator">/</span>
+    <span class="count_of_visits" title="点击数">
+      <%=item.viewNum%>
+    </span>
+    <span class="topiclist-tab"> <%=test(item.tab)%>
+        <%
+            //后台代码表达式
+            function test(num){
+              var con; 
+                switch(num){
+                  case "0":
+                    con="分享";
+                    break;
+                  case "1":
+                    con="招聘";
+                    break;
+                  case "2":
+                    con="问答";
+                    break;
+                  case "3":
+                    con="测试";
+                    break;
+                };
+                return con;
+            }
+        %>
+
+    </span>
+  </span>
+
+  
+  <a class="last_time pull-right" href="/topic/597edd7f8f0313ff0d08d97a#59919079ee602e88524b422e">
+  <!-- 输出最后回复头像 -->
+    <%if(item.lastUser){%>
+     <img style="width:18px;height:18px" src="/usericos/<%=item.lastUser.userIco?item.lastUser.userIco:'default.jpg'%>"/>
+    <%}%>
+    <span class="last_active_time"><%=setTime(item.retime)%> </span>
+  </a>
+  
+  
+
+  <div class="topic_title_wrapper">
+
+    
+
+
+
+    <a class="topic_title" href="/topic/show/<%=item._id%>" title="<%=item.title%>">
+      <%=item.title%>
+    </a>
+  </div>
+</div>
+
+
+
+
+<%})%>
+<!-- 遍历结束 -->
+
+
+</div>
+
+
+
+<div class="pagination" current_page="1">
+ <ul>
+    
+ 
+
+
+  <!-- <<永远返回第一页 -->
+    <% if(page==1){%>
+       <li class="disabled"><a>«</a></li>
+    <%}else{%>
+       <li><a href="/?page=1">«</a></li>
+    <%}%>
+     
+<!-- 提示前面还有页 ...-->
+    <%if(page>=4){%>
+       <li class="disabled"><a>...</a></li>
+    <%}%>
+ <!-- 结束位置 -->
+  <%
+   
+    // console.log(typeof page); 
+      var p=parseInt(page)+2;
+      if(p<5){
+        p=5;
+      }
+  %>
+  <%
+  //情况是page=5
+  for(var i=page-2;i<=p;i++){
+        if(i<1||i>pageMax){
+        continue
+      }
+
+  %>
+   <li><a href="/?page=<%=i%>"><%=i%></a></li>
+  <%}%>
+<!-- pageMax-(parseInt(page)+2)>=1 证明后面还有-->
+    <% if(pageMax-(parseInt(page)+2)>=1){%>
+        <li><a>...</a></li>
+    <%}%>
+
+    <li><a href="/?page=<%=pageMax%>">»</a></li>
+    
+  </ul>
+</div>
+
+
+    </div>
+    
+  </div>
+</div>
+
+</div>
+
+
+<%include ../layout/footer%>
